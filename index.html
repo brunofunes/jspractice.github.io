@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+    <script src="app.js"></script>
+    <script src="./Módulos/ejercicio.js"></script>
+    <link rel="stylesheet" href="./Módulos/style.css">
+</head>
+
+<body class="dark" id="body">
+    <!-- TITULO -->
+    <h1 id="scroll-top"><span>JS</span>Practice</h1>
+    <!-- RELOJ Y ALARMA -->
+    <div class="container-total-de-espacios">
+    <div class="espacios">
+    <div class="container-relojYAlarma">
+        <div class="title">Reloj y Alarma Digital</div>
+        <section class="container-seccion">
+            <label id="horario">-- --</label>
+            <div class="container-btn-relojYAlarma">
+                <button class="btn-relojYAlarma" id="btn-iniciar-reloj">Iniciar Reloj</button>
+                <button class="btn-relojYAlarma" id="btn-detener-reloj">Detener Reloj</button>
+                <button class="btn-relojYAlarma" id="btn-iniciar-alarma">Iniciar Alarma</button>
+                <button class="btn-relojYAlarma" id="btn-detener-alarma">Detener Alarma</button>
+            </div>
+            <audio id="miAudio" src="assets/alarma.mp3" type="audio"></audio>
+        </section>
+    </div>
+    </div>
+    <!-- BTN HAMBURGUESA -->
+    <button id="btn-hambur">
+        <img src="assets/hmg-icon.svg" alt="hmg-icon">
+    </button>
+    <!-- BTN DARKMODE -->
+    <button id="btn-darkmode">
+        <img src="assets/moon-icon.svg" alt="moon-icon">
+    </button>
+
+    <button id="btn-lightmode">
+        <img src="assets/sun-icon.svg" alt="sun-icon">
+    </button>
+    <!-- BTN SLICE -->
+    <button id="btn-slice">
+        <img src="assets/arrou-up.svg" alt="arrow-up">
+    </button>
+    
+    <!-- SECCION 1 - CAJA Y PELOTA -->
+        <div id="e-1" class="espacios">Move the Ball 🎳 (WASD)
+            <div id="cajacontenedora-negra">
+                <div id="pelota"></div>
+            </div>
+            <div id="alerta">
+                "Ctrl + a" para lanzar una alerta
+            </div>
+        </div>
+    <!-- SECCION 2 - COUNTDOWN -->
+        <div id="e-2" class="espacios">
+            <div class="titulo-countdown">Countdown ⏰</div>
+            <div class="b-date" id="b-date">Para el 4 de julio falta</div>
+            <div class="countdown" id="id-countdown">-- --</div>
+            <audio id="id-birthday" src="assets/cumple.mp3" type="audio"></audio>
+        </div>
+    <!-- SECCION 3 - RESPONSIVE -->
+        <div id="e-3" class="espacio-aparte">
+            <div class="contenedor-responsive">
+                <h4>Responsive con JS</h4>
+                <a id="a-video" target="_blank" href="https://www.youtube.com/embed/2SetvwBV-SU?si=y4uOQIrY_OdR8uYs" style="font-size: 20px;">Video</a>
+                <a id="a-map" target="_blank" href="https://www.google.com/maps/@-31.250412,-61.4918832,14z?hl=es-419&entry=ttu" style="font-size: 20px;" >Mapa</a>
+                <iframe id="video-jon-id" class="video-jon" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe id="map-id" class="video-jon" src="" width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    <!-- SECCION 4 - RESPONSIVE TESTER -->
+        <div id="e-4" class="espacios">
+            <form id="myForm" class="contenedor-responsive">
+                <h4>Responsive Tester 🧪</h4>
+                <input required type="url" placeholder="https://example.com" id="input-url">
+                <input required type="number" placeholder="Ancho" id="input-ancho">
+                <input required type="number" placeholder="Alto" id="input-alto">
+                <div>
+                    <button id="btn-probar" type="submit">Probar</button>
+                    <button id="btn-cerrar" type="button">Cerrar</button>
+                </div>
+            </form>
+        </div>
+    <!-- SECCION 5 - DETECCIÓN DE DISPOSITIVOS -->
+        <div id="e-5" class="espacios">
+            <div class="container-useragent">
+                <h4>Detección de Dispositivos 💻</h4>
+                <h5>(User Agent)</h5>
+                <ul class="ul-user">
+                    <li>User Agent:</li>
+                    <div id="id-useragent"></div>
+                    <li>Plataforma:</li>
+                    <div id="id-plataforma"></div>
+                    <li>Navegador:</li>
+                    <div id="id-navegador"></div>
+                </ul>
+            </div>
+        </div>
+    <!-- SECCION 6 - ESTADO DE CONEXIÓN -->
+        <div id="e-6" class="espacios">TEST DE CONEXIÓN 📶
+            <p>(Notifica el estado de conexión de la red)</p>
+            <p>Prueba desconectarte y conectarte nuevamente a internet</p>
+            <div id="cartel-green">En línea</div>
+            <div id="cartel-red">Desconectado</div>
+        </div>
+    <!-- SECCION 7 - DETECCIÓN DE WEBCAM -->
+        <div id="e-7" class="espacios">
+            <h4>Deteccion de la Cámara Web 📷</h4>
+            <p id="wait-cam">Esperando camara</p>
+            <video id="cam-video">
+            </video>
+        </div>
+    <!-- SECCION 8 - GEOLOCALIZATION -->
+        <div id="e-8" class="espacios">
+            <h4>Geolocalización 🌎</h4>
+            <div>Tu posicion actual es:</div>
+            <div>Latitud:</div>
+            <p id="latitud-id"></p>
+            <div>Longitud:</div>
+            <p id="longitud-id"></p>
+            <div>Precisión:</div>
+            <p id="acuracy-id"></p>
+            <a target="_blank" href="https://www.google.com.ar/maps/@${latitude},${longitude},15z" rel="noopener">Ver en Google Maps</a>
+        </div>
+        <!-- SECCION 9 - SEARCH -->
+        <div id="e-9" class="espacios">
+            <h4>Filtro de Búsqueda 🔍</h4>
+            <input id="input-search" type="search" placeholder="Search">
+            <div id="container-search">
+                <div class="cards">
+                    <img class="img-cards" src="img/fruta.jpeg" alt="Frutas">
+                    <p class="text-titulo">Frutas</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/animal.jpg" alt="Animales">
+                    <p class="text-titulo">Animales</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/instrumento.webp" alt="Instrumentos">
+                    <p class="text-titulo">Instrumentos </p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/deporte.jpeg" alt="Deportes">
+                    <p class="text-titulo">Deportes</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/paises.png" alt="Países">
+                    <p class="text-titulo">Países</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/auto.webp" alt="Vehículos">
+                    <p class="text-titulo">Vehículos</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/figuras.avif" alt="Formas">
+                    <p class="text-titulo">Formas</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/aguila.jpeg" alt="Aguila">
+                    <p class="text-titulo">Aguila</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/ardilla.jpeg" alt="Ardilla">
+                    <p class="text-titulo">Ardilla</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/bugati.avif" alt="Bugatti">
+                    <p class="text-titulo">Bugatti</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/koala.avif" alt="Koala">
+                    <p class="text-titulo">Koala</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/tigre.jpeg" alt="Tigre">
+                    <p class="text-titulo">Tigre</p>
+                </div>
+                <div class="cards">
+                    <img class="img-cards" src="img/maserati.webp" alt="Maseratti">
+                    <p class="text-titulo">Maseratti</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCION 9 - SORTEO DIGITAL -->
+        <div id="e-10" class="espacios">
+            <h4>Sorteo Digital 🎁</h4>
+            <ul>
+                <li class="player">Bruno</li>
+                <li class="player">Jon</li>
+                <li class="player">Pablo</li>
+                <li class="player">Juandi</li>
+                <li class="player">Guille</li>
+                <li class="player">Nico</li>
+                <li class="player">Kevin</li>
+                <li class="player">German</li>
+                <li class="player">Santi</li>
+                <li class="player">Valen</li>
+            </ul>
+            <button id="btn-ganador">Obtener Ganador</button>
+        </div>
+
+        <!-- SECCION 9 - CARRUSEL RESPONSIVE-->
+        <div id="e-11" class="espacios">
+            <h4>Carrusel Responsive</h4>
+            <div id="container-carrusel">
+                <p>De paisajes Argentinos 🌞</p>
+                <div id="container-imagenes">
+                    <img class="imagen-carrusel active" src="img/paisaje1.jpg" alt="">
+                    <img class="imagen-carrusel " src="img/paisaje2.jpg" alt="">
+                    <img class="imagen-carrusel" src="img/paisaje3.jpg" alt="">
+                    <img class="imagen-carrusel" src="img/paisaje4.webp" alt="">
+                    <img class="imagen-carrusel" src="img/paisaje5.jpg" alt="">
+                    <img class="imagen-carrusel" src="img/paisaje6.jpg" alt="">
+                    <img class="imagen-carrusel" src="img/paisaje7.jpg" alt="">
+                </div>
+                <button id="id-siguiente">
+                    <img src="assets/right-arrow.svg" alt="">
+                </button>
+                <button id="id-anterior">
+                    <img src="assets/left-arrow.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div id="e-12" class="espacios">
+            <h4>ScrollSpy 🕵🏼‍♂️</h4>
+            <section class="scrollspy-container">
+                <div id="id-div-titulos">
+                    <p class="titulos" data-target="parrafo1" >Titulo 1</p>
+                    <p class="titulos" data-target="parrafo2">Titulo 2</p>
+                    <p class="titulos" data-target="parrafo3">Titulo 3</p>
+                    <p class="titulos" data-target="parrafo4">Titulo 4</p>
+                </div>
+                <aside id="id-aside-texto">
+                    <p id="parrafo1" class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?</p>
+                    <br>
+                    <p id="parrafo2" class="parrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corporis sint reprehenderit recusandae quisquam labore impedit at, animi placeat deserunt quasi neque eos delectus excepturi vel doloribus dicta in perferendis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?</p>
+                    <br>
+                    <p id="parrafo3" class="parrafos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque accusamus possimus minus sint, eum doloribus laudantium incidunt consequatur ad? Quas fugit dolores sed libero! Maiores mollitia obcaecati tempore minus ipsum!Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?</p>
+                    <br>
+                    <p id="parrafo4" class="parrafos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, aliquid eos dolor quia mollitia, sed, veritatis atque incidunt natus culpa voluptates iste eligendi officiis numquam consequuntur? Iste non repudiandae illum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ullam accusantium alias necessitatibus possimus tempore fugit consectetur repellendus quisquam soluta assumenda rerum quas saepe, expedita velit delectus iusto totam dolorum?</p>
+                </aside>
+            </section>
+        </div>
+        <div id="e-13" class="espacios">
+            <div id="container-narrador">
+                <h4>Narrador 🎤</h4>
+                <select id="selector-idiomas">
+                    <option value="" disabled selected>Selecciona un idioma</option>
+                </select>
+                <textarea placeholder="Escriba su texto aqui..." name="" id="text-area"></textarea>
+                <button id="btn-leertexto">Leer Texto</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- SECCIONES -->
+    <div class="container-total">
+        <div id="contenedor" class="container">
+            <a id="s-1" class="section">MOVE BALL</a>
+            <a id="s-2" class="section">COUNTDOWN</a>
+            <a id="s-3" class="section">RESPONSIVE</a>
+            <a id="s-4" class="section">RESPONSIVE TESTER</a>
+            <a id="s-5" class="section">USER AGENT</a>
+            <a id="s-6" class="section">DETECCIÓN DE CONEXIÓN</a>
+            <a id="s-7" class="section">DETECCIÓN DE CÁMARA</a>
+            <a id="s-8" class="section">GEOLOCATION</a>
+            <a id="s-9" class="section">BUSCADOR</a>
+            <a id="s-10" class="section">SORTEO DIGITAL</a>
+            <a id="s-11" class="section">CARRUSEL RESPONSIVE</a>
+            <a id="s-12" class="section">SCROLL SPY</a>
+            <a id="s-13" class="section">LECTOR DE TEXTO</a>
+        </div>
+    </div>
+
+
+    <script src="Ejercicio/1_btn_hamburguesa.js"></script>
+    <script src="Ejercicio/2_reloj_alarma.js"></script>
+    <script src="Ejercicio/3_pelota.js"></script>
+    <script src="Ejercicio/4_cuenta_regresiva.js"></script>
+    <script src="Ejercicio/5_btn_scroll.js"></script>
+    <script src="Ejercicio/6_dark_mode.js"></script>
+    <script src="Ejercicio/7_responsive.js"></script>
+    <script src="Ejercicio/8_responsive_tester.js"></script>
+    <script src="Ejercicio/9_user_agent.js"></script>
+    <script src="Ejercicio/10_net_status.js"></script>
+    <script src="Ejercicio/11_webcam.js"></script>
+    <script src="Ejercicio/12_geolocalization.js"></script>
+    <script src="Ejercicio/13_search.js"></script>
+    <script src="Ejercicio/14_sorteo.js"></script>
+    <script src="Ejercicio/15_carrusel.js"></script>
+    <script src="Ejercicio/16_scrollspy.js"></script>
+    <script src="Ejercicio/17_narrador.js"></script>
+    <script src="Módulos/Modulo.js" type="module"></script>
+</body>
+</html>
