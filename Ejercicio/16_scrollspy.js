@@ -36,7 +36,7 @@ const $cambiarColor = document.getElementsByClassName("titulos");
 let options = {
   root: $observador,
   rootMargin: "0px",
-  threshold: 0.3,
+  threshold: 0.5,
 };
 
 function callback(entries, observer) {
