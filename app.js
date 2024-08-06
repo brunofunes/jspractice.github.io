@@ -674,7 +674,21 @@ console.log(navigator.connection)
 */
 
 
+// function suma(n1 = 0, n2 = 0) {
+//     resultado = n1 + n2;
+//     console.log(resultado);
+    
+// }
 
+
+// suma(3, 7);
+// suma(10, 5);
+// suma(10)
+
+
+(()=> {
+console.log("Hola mundo!!");
+})()
 
 
 
